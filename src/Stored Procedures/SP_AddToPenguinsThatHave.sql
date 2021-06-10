@@ -1,5 +1,6 @@
 /*
-	Add an item to all penguins that have a specified item
+	
+	PURPOSE	  : Add an item to all penguins that have a specified item
 	Parameters: 
 				neededItem	INT: The itemID necessary for the desired item to be added
 				itemtoAdd	INT: The item you want to add to all users who have the item 'neededItem'
