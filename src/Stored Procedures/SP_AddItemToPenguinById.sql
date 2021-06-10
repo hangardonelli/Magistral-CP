@@ -1,11 +1,18 @@
+/*
+   PURPOSE	  : Add an item to penguin by penguin_id
+		
+	==============================================================================================================
+	USAGE EXAMPLE: CALL AddToPenguinsThatHave(210, 1227)  
+*/
+
 create or replace procedure AddToPenguinsThatHave(
-   neededItem int,
-   itemToAdd int
+   penguinId int,
+   itemId int
 )
 language plpgsql    
 as $$
 begin
     INSERT INTO penguin_item(penguin_id, item_id)
-    SELECT penguin_id, itemToAdd  FROM penguin_item WHERE item_id = neededItem; 
+    VALUES (penguinId, itemId)
     commit;
 end;$$
