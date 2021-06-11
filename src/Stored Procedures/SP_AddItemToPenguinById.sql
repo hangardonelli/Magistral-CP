@@ -2,10 +2,10 @@
    PURPOSE	  : Add an item to penguin by penguin_id
 		
 	==============================================================================================================
-	USAGE EXAMPLE: CALL AddToPenguinsThatHave(210, 1227)  
+	USAGE EXAMPLE: CALL AddToPenguinById(210, 1227)  
 */
 
-create or replace procedure AddToPenguinsThatHave(
+create or replace procedure AddToPenguinById(
    penguinId int,
    itemId int
 )
