@@ -8,6 +8,8 @@ CREATE OR REPLACE PROCEDURE AddFurnitureByUsername(
    Parameters:
       -penguin_username:   The username (or nickname) of the player
       -furnitureID         The ID of the furniture item that you want to add
+   
+   Precondition:           The player does not have the specified item
 */
 language plpgsql    
 as $$
