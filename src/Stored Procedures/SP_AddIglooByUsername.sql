@@ -1,21 +1,18 @@
-CREATE OR REPLACE PROCEDURE AddIglooByUsername(
-   penguin_username varchar,
-   igloo_id int
-)
 
+CREATE OR REPLACE PROCEDURE AddFurnitureByUsername(
+   penguin_username varchar,
+   furnitureID int
+)
 /*
-   Add an specified igloo to a specified penguin by his username.
+   Add a specified furniture to a specified player
    Parameters:
-      -penguin_username:   The username (or nickname) of the penguin.
-      -igloo_id:           The specified id of the igloo to add to the player
-   
-   Precondition:
-      The user does not have the specified igloo
+      -penguin_username:   The username (or nickname) of the player
+      -furnitureID         The ID of the furniture item that you want to add
 */
 language plpgsql    
 as $$
 begin
-    INSERT INTO penguin_igloo(penguin_id, igloo_id)
-    SELECT id, igloo_id from penguin where username = lower(penguin_username);
+    INSERT INTO penguin_furniture(penguin_id, furniture_id, quantity)
+    SELECT id, furnitureID, 1 from penguin where username = lower(penguin_username);
     commit;
 end;$$
