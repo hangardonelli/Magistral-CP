@@ -12,8 +12,8 @@ RETURNS TABLE (
 				_comment text
 			  )
 /*
-	Return active bans
-	Parameters:	
+	Return bans from specific username
+	Parameters: name, the name of the penguin
 		
 */
 LANGUAGE 'plpgsql'
